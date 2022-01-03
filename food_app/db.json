@@ -1,0 +1,4 @@
+{
+    "recipes" : [{"title": "paneer","ingredients":"onion,oil,masala,paneer","time":"20 mins","instructions":"prepare masala,added,paneer and cook"},
+        {"title": "chicken","ingredients":"onion,oil,masala,chicken","time":"25 mins","instructions":"prepare masala,added,chicken and cook"}]
+}

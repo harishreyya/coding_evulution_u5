@@ -29,3 +29,31 @@
   color: rgb(63, 59, 59);
  
 }
+
+
+.flex{
+  display: flex;
+  margin: 50px;
+}
+
+.flex > h1{
+  text-align: center;
+}
+
+.recipe{
+  width: 400px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-left: 50px;
+  margin-top: 20px;
+  background-image: url("https://therecipecritic.com/wp-content/uploads/2021/03/bakedrigatoni-368x463.jpg");
+  
+}
+
+.recipe > h1{
+  text-align: center;
+  padding: 2% 2% 2% 2%;
+}
+
+.recipe > h1:hover{
+color: green;
+}

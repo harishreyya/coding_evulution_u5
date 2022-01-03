@@ -1,9 +1,37 @@
 import { useState } from "react"
+import {useEffect} from "react/cjs/react.development"
 
 export const Form = () =>{
 
     const [text, setText] = useState("");
     const [add, setAdd] = useState([]);
+
+    useEffect(() => {
+
+    })
+    const getRecipe = () => {
+        fetch("http://localhost:3001/Recipe").then(d => d.json()).then(res => {
+            setAdd(res)
+        })
+    }
+    const addRecipe = () => {
+        const payload = {
+            title : text,
+            ingrediants : text,
+            time : text,
+            instructions : text,
+        }
+        fetch("http://localhost:3002/recipes", {
+            method : "POST",
+            body: JSON.stringify(payload),
+            headers: {
+                "content-type": "application/json"
+            }
+        }).then(() => {
+            getRecipe()
+            setText("")
+        })
+    }
 
     return <div className='form'>
     <h1>Recipe of food</h1>
